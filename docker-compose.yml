@@ -10,7 +10,7 @@ services:
       - "3000:80"
 
   server:
-    build: ./streams-api
+    build: ./streams-server
     volumes:
       - json-data:/usr/src/app
     ports:
