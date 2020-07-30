@@ -1,6 +1,6 @@
 # CRUD React App
 
-## Set the build argument in the `docker-compose.yml`
+## Set the build argument in `docker-compose.yml`
 
 ```yaml
 version: '3'
