@@ -4,8 +4,8 @@
 
 ```yaml
 version: '3'
-services:
 
+services:
   client:
     build:
       context: ./streams-client
