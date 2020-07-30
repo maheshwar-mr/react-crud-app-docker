@@ -9,19 +9,19 @@ class StreamList extends React.Component {
   }
 
   renderAdmin(stream) {
-      return (
-        <div className="right floated content">
-          <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
-            Edit
+    return (
+      <div className="right floated content">
+        <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+          Edit
           </Link>
-          <Link
-            to={`/streams/delete/${stream.id}`}
-            className="ui button negative"
-          >
-            Delete
+        <Link
+          to={`/streams/delete/${stream.id}`}
+          className="ui button negative"
+        >
+          Delete
           </Link>
-        </div>
-      );
+      </div>
+    );
   }
 
   renderList() {
@@ -42,13 +42,13 @@ class StreamList extends React.Component {
   }
 
   renderCreate() {
-      return (
-        <div style={{ textAlign: "right" }}>
-          <Link to="/streams/new" className="ui button primary">
-            Create Stream
+    return (
+      <div style={{ textAlign: "right" }}>
+        <Link to="/streams/new" className="ui button primary">
+          Create Stream
           </Link>
-        </div>
-      );
+      </div>
+    );
   }
 
   render() {

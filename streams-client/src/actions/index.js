@@ -1,8 +1,6 @@
 import streams from "../apis/streams";
 import history from "../history";
 import {
-  SIGN_IN,
-  SIGN_OUT,
   CREATE_STREAM,
   FETCH_STREAMS,
   FETCH_STREAM,
@@ -10,22 +8,8 @@ import {
   EDIT_STREAM,
 } from "./types";
 
-export const signIn = (userId) => {
-  return {
-    type: SIGN_IN,
-    payload: userId,
-  };
-};
-
-export const signOut = () => {
-  return {
-    type: SIGN_OUT,
-  };
-};
-
-export const createStream = (formValues) => async (dispatch, getState) => {
-  const { userId } = getState().auth;
-  const response = await streams.post("/streams", { ...formValues, userId });
+export const createStream = (formValues) => async (dispatch) => {
+  const response = await streams.post("/streams", { ...formValues });
   dispatch({ type: CREATE_STREAM, payload: response.data });
   // Programmatic Navigation to take the user back to the root route
   history.push("/");
