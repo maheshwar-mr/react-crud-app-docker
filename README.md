@@ -1,4 +1,4 @@
-# CRUD React App
+# React CRUD App
 
 ## Set the build argument in `docker-compose.yml`
 
