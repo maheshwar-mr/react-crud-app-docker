@@ -36,4 +36,4 @@ Run the following command to start up the containers
 docker-compose up --build -d
 ```
 
-This will start up the client and server containers on 3000 and 3001 host ports
+This will start up the client and server containers on 3000 and 3001 host ports respectively
