@@ -26,7 +26,7 @@ volumes:
     driver: local
 ```
 
-Set the argument `REACT_APP_HOST_IP_ADDRESS` to the host ip e.g. http://123.45.67.890:3001 so that the client can reach the json-server
+Set the argument `REACT_APP_HOST_IP_ADDRESS` to the host IP e.g. http://123.45.67.890:3001 so that the client can reach the json-server
 
 ## Starting the docker containers
 
