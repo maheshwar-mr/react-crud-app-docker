@@ -12,7 +12,7 @@ ENV REACT_APP_HOST_IP_ADDRESS $REACT_APP_HOST_IP_ADDRESS
 
 COPY . .
 
-RUN npm run --silent build
+RUN npm run build
 
 
 FROM nginx:alpine

@@ -1,11 +1,11 @@
-version: "3"
+version: '3'
 services:
 
   client:
     build:
       context: ./streams-client
       args:
-        - REACT_APP_HOST_IP_ADDRESS=35.225.210.223
+        - REACT_APP_HOST_IP_ADDRESS=http://35.225.210.223:3001
     ports:
       - "3000:80"
 
