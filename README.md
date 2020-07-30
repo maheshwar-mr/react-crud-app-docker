@@ -10,7 +10,7 @@ services:
     build:
       context: ./streams-client
       args:
-        - REACT_APP_HOST_IP_ADDRESS={YOUR HOST IP ADDRESS}
+        - REACT_APP_HOST_IP_ADDRESS=http://YOUR_HOST_IP:3001
     ports:
       - "3000:80"
 
