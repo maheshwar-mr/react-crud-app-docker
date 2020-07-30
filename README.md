@@ -3,7 +3,7 @@
 ## Set the build argument in the `docker-compose.yml`
 
 ```yaml
-version: "3"
+version: '3'
 services:
 
   client:
@@ -12,7 +12,7 @@ services:
       args:
         - REACT_APP_HOST_IP_ADDRESS={YOUR HOST IP ADDRESS}
     ports:
-      - "3000:5000"
+      - "3000:80"
 
   server:
     build: ./streams-api
@@ -23,7 +23,7 @@ services:
 
 volumes:
   json-data:
-    external: true
+    driver: local
 ```
 
 Set the argument `REACT_APP_HOST_ID_ADDRESS` to the host ip so that the client can reach the json-server
