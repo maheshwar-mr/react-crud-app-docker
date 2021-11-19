@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streams-server
+  labels:
+    app: streams-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streams-server
+  template:
+    metadata:
+      labels:
+        app: streams-server
+    spec:
+      containers:
+      - name: streams-server
+        image: streams-server:latest
+        ports:
+        - containerPort: 3001
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: server-service
+spec:
+  type: NodePort
+  selector:
+    app: streams-server
+  ports:
+    - protocol: TCP
+      port: 3001
+      targetPort: 3001
